@@ -58,8 +58,8 @@ function convertToArray(str) {
 }
 
 /**
-*@param {object} el - html node, treated as root in tree traversal algorithm
-*@param {function} cb - callback function that takes in specified node
+  *@param {object} el - html node, treated as root in tree traversal algorithm
+  *@param {function} cb - callback function that takes in specified node
 */
 function traverseDOM(el, cb){
   /**
