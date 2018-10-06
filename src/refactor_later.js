@@ -16,10 +16,9 @@ var $scope = {
   }
 };
 
-//parses string values, looking for the {{}} binding indicators and saving everything within it in memory to send
-//to another function, determining if it matches any logic or data bindings in our $scope object
 /**
-*parser -- parses through an html-like string searching for particular indicators -- {{}}
+*parser -- parses string values, looking for the {{}} binding indicators and saving everything within it in memory to send
+           to another function, determining if it matches any logic or data bindings in our $scope object
 *@param {string} str - html-like string
 */
 function parser(str) {
