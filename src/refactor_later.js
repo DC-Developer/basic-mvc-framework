@@ -58,27 +58,6 @@ function convertToArray(str) {
 }
 
 /**
-*@param {object} node - html element node
-*@param {function} cb - callback function to perform logic on specified node
-*/
-function traverseNodeForBindings(node, cb){
-  node = node.firstElementChild;
-
-  if (node) {
-      cb(node);
-  }
-
-  while(node) {
-     traverseNodeForBindings(node, cb);
-     node = node.nextElementSibling;
-
-     if (node) {
-        cb(node);
-     }
-  }
-}
-
-/**
 *@param {object} el - html node, treated as root in tree traversal algorithm
 *@param {function} cb - callback function that takes in specified node
 */
@@ -105,6 +84,27 @@ function traverseDOM(el, cb){
     el = el.nextElementSibling;
   };
 
+}
+
+/**
+*@param {object} node - html element node
+*@param {function} cb - callback function to perform logic on specified node
+*/
+function traverseNodeForBindings(node, cb){
+  node = node.firstElementChild;
+
+  if (node) {
+      cb(node);
+  }
+
+  while(node) {
+     traverseNodeForBindings(node, cb);
+     node = node.nextElementSibling;
+
+     if (node) {
+        cb(node);
+     }
+  }
 }
 
 //this here is for testing purposes -- will seperate this into seperate modules, but use this as reference
