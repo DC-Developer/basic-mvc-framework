@@ -40,8 +40,8 @@ function parser(str) {
 }
 
 /**
-*convertToArray - speaks for itself
-*@param {str} - passed in string containing array indicators
+  *convertToArray - speaks for itself
+  *@param {str} - passed in string containing array indicators
 */
 function convertToArray(str) {
   if (!str) {
@@ -87,8 +87,8 @@ function traverseDOM(el, cb){
 }
 
 /**
-*@param {object} node - html element node
-*@param {function} cb - callback function to perform logic on specified node
+  *@param {object} node - html element node
+  *@param {function} cb - callback function to perform logic on specified node
 */
 function traverseNodeForBindings(node, cb){
   node = node.firstElementChild;
