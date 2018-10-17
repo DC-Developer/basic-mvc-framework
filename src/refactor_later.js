@@ -1,10 +1,3 @@
-/**
-  Before we can parse the html, we are going to need to target an element node, and then recursively
-  traverse through its node tree and store the tree in memory. Once in memory, we can parse the tree
-  for the passed in controller names and their functions and relate that to the user's instantiated
-  controller and respective methods.
-*/
-
 var $scope = {
   controllers: {
     controller: {
